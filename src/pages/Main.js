@@ -14,9 +14,9 @@ import Skill from "../components/Skill"
 const Main = () => {
     const langs = {
         cpp: { id: "langs/cpp", label: "C++" },
-        js_ts: { id: "langs/js_ts", label: "Java Script / Type Script" },
-        java: { id: "langs/java", label: "Java" },
-        html_css: { id: "langs/html_css", label: "HTML + CSS" },
+        js_ts: { id: "langs/js_ts", label: "JavaScript" },
+        java: { id: "langs/java", label: "Python" },
+        html_css: { id: "langs/html_css", label: "MATLAB" },
         tex: { id: "langs/tex", label: "LaTex" }
     }
 
@@ -83,44 +83,44 @@ const Main = () => {
             </nav>
             <main>
                 <img src={"assets/me.jpg"} />
-                <h1>Matthew Perlman</h1>
+                <h1>Emir Koç</h1>
                 <label>
-                    Machine Learning
+                    Artificial Intelligence/Machine Learning
                     <div className={"dot"} />
-                    Formal Language Theory
+                    Data Science
                     <div className={"dot"} />
-                    Programming Languages
+                    C++, Python, JavaScript, MATLAB
                 </label>
                 <br />
                 <label>
-                    2D/3D Graphics
+                    Backend Engineer
                     <div className={"dot"} />
-                    Robotics
+                    Embedded Systems
                     <div className={"dot"} />
-                    Fullstack Web
+                    Quantitative Analyst
                     <div className={"dot"} />
-                    iOS Mobile
+                    Options Trader
                 </label>
                 <br />
                 <div className={"links"}>
-                    <a target={"_blank"} href={"https://github.com/mattperls-code"}><FontAwesomeIcon icon={faGithubSquare} /></a>
-                    <a target={"_blank"} href={"https://www.linkedin.com/in/matthew-perlman-a637a7301"}><FontAwesomeIcon icon={faLinkedin} /></a>
-                    <a target={"_blank"} href={"mailto:mattperls.code@gmail.com"}><FontAwesomeIcon icon={faSquareEnvelope} /></a>
-                    <a target={"_blank"} href={"https://www.instagram.com/mattperls"}><FontAwesomeIcon icon={faInstagramSquare} /></a>
+                    <a target={"_blank"} href={"https://github.com/emir-ece"}><FontAwesomeIcon icon={faGithubSquare} /></a>
+                    <a target={"_blank"} href={"https://www.linkedin.com/in/emirkoc223"}><FontAwesomeIcon icon={faLinkedin} /></a>
+                    <a target={"_blank"} href={"mailto:ekoc@umass.edu"}><FontAwesomeIcon icon={faSquareEnvelope} /></a>
+                    <a target={"_blank"} href={"https://www.instagram.com/emi12k"}><FontAwesomeIcon icon={faInstagramSquare} /></a>
                 </div>
             </main>
             <section id={"about"}>
                 <h1>About</h1>
                 <div>
-                Hello, my name is Matt, and I'm a sophomore studying Computer Science at UMass Amherst.
+                Hey, my name is Emir, and I'm a rising junior at the University of Massachusetts--Amherst studying Computer Engineering paired with a minor in Economics!
                 <br /><br />
-                I love to program and am very passionate about computer graphics, robotics, and machine learning. I've been writing code for about 8 years now and I'm an adept problem solver across many fields. I've written parsers, neural networks, programming languages, and rendering engines all from scratch in C++ as well as award winning websites, chrome extensions, and mobiles apps using JavaScript and React.
+                I love to program and I’m extremely passionate about software engineering, machine learning, and finance, and I love working on projects that combine programming with real-world applications. One of my main projects is a financial dashboard built using a Raspberry Pi paired with an NVIDIA Jetson Nano, designed for real-time options pricing, backtesting, and financial forecasting. The system leverages predictive models to evaluate strategies, run simulations, and provide insights into equity and options trading.
                 <br /><br />
-                I've released several iOS mobile apps, done some professional freelance web development over the years, and am a founding member and the CTO of ClearContext, an AI powered tool to help identify and eliminate bias in online media.
+                I also have professional experience as a General Manager at Boston Bay Pizza, where I managed daily operations in a high-productivity environment, analyzed financial trends, and increased sales revenue through strategic decision-making. Beyond that, I served as president of my high school’s Stock Market Club, leading over 50 members in discussions on market fundamentals, technical analysis, and risk management.
                 <br /><br />
-                As a high schooler, I was the lead programmer and a driver for our FRC team, the Robolancers, and won the world championship in 2024. My two years of leadership on our 50+ person team taught me valuable soft skills about work management, delegation, dev ops, and communication as well as important technical skills like computer vision, control theory, and autonomous planning.
+                Alongside my academic work, I’ve developed strong technical skills in Python, C++, JavaScript, MATLAB, R, PyTorch, TensorFlow, XGBoost, and microcontrollers, as well as practical experience in data visualization, backtesting frameworks, and financial modeling.
                 <br /><br />
-                I love building interesting and innovative projects, and am always looking for something new to learn about. Please reach out with any questions or ideas!
+                I love building innovative projects at the intersection of technology and finance, and I’m always looking to take on new challenges. Please feel free to reach out—I’d be glad to connect and share ideas!
                 </div>
             </section>
             <section id={"education"}>
@@ -129,25 +129,25 @@ const Main = () => {
                 <div className={"education-container"}>
                     <Education title={"UMass Amherst Undergrad"} description={
                         <React.Fragment>
-                            Overall GPA: 3.932
+                            Overall GPA: 3.504
                             <br />
-                            Major GPA: 3.889
+                            Major GPA: 3.68
                             <br /><br />
-                            Currently I am a sophomore at the University of Massachusetts Amherst studying Computer Science.
+                            Currently, I'm a junior at the University of Massachusetts Amherst studying Computer Engineering.
                             <br /><br />
-                            I plan to graduate with a B.S. in 2027 and a M.S. in 2028.
+                            I plan to graduate with a B.S. in 2027 and hopefully pursue my M.S. by 2028.
                         </React.Fragment>
                     } />
                     
-                    <Education title={"Central High School"} description={
+                    <Education title={"Ludlow High School"} description={
                         <React.Fragment>
-                            Unweighted GPA: 3.87
+                            Unweighted GPA: 3.4
                             <br />
-                            Weighted GPA: 4.33
+                            Weighted GPA: 3.79
                             <br /><br />
-                            I attended Central High School from 2020-2024 with a class size of roughly 600 students.
+                            I attended Ludlow High School from 2019-2023 with a class size of roughly 200 students.
                             <br /><br />
-                            I graduated with the highest Honor Roll and received the Barnwell Service Award, the Alexander Dallas Bache Science Prize (for Physics), and the Barry R. Bloom Prize (for Science).
+                            I graduated with Honor Roll and received multiple scholarships while being a tri-sport athlete.
                         </React.Fragment>
                     } />
                 </div>
