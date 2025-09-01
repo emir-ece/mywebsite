@@ -120,7 +120,7 @@ const Main = () => {
                 <br /><br />
                 Alongside my academic work, I’ve developed strong technical skills in Python, C++, JavaScript, MATLAB, R, PyTorch, TensorFlow, XGBoost, and microcontrollers, as well as practical experience in data visualization, backtesting frameworks, and financial modeling.
                 <br /><br />
-                I love building innovative projects at the intersection of technology and finance, and I’m always looking to take on new challenges. Please feel free to reach out—I’d be glad to connect and share ideas!
+                I love building innovative projects at the intersection of technology and finance, and I’m always looking to take on new challenges. Please feel free to reach out; whether its tech, investing, or general stuff I’d be glad to connect and share ideas!
                 </div>
             </section>
             <section id={"education"}>
@@ -147,7 +147,9 @@ const Main = () => {
                             <br /><br />
                             I attended Ludlow High School from 2019-2023 with a class size of roughly 200 students.
                             <br /><br />
-                            I graduated with Honor Roll and received multiple scholarships while being a tri-sport athlete.
+                            Here, I was the founder of the Stock Market club where I presented weekly lessons on fundamentals, patterns, technical analysis, and risk management.
+                            <br /><br />
+                            I graduated with the highest Honor Roll and received multiple scholarships while being a tri-sport athlete.
                         </React.Fragment>
                     } />
                 </div>
