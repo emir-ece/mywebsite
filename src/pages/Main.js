@@ -18,7 +18,7 @@ const Main = () => {
         python: { id: "langs/python", label: "Python" },
         html_css: { id: "langs/html_css", label: "MATLAB" },
         tex: { id: "langs/tex", label: "LaTex" },
-        mlab: { id: "langs/mlab, label: "MATLAB" }
+        mlab: { id: "langs/mlab", label: "MATLAB" },
     }
 
     const skills = {
@@ -38,7 +38,7 @@ const Main = () => {
         extensions : { id: "skills/extensions", label: "Chrome Extensions" },
         lead : { id: "skills/lead", label: "Team Leadership" },
         swe : { id: "skills/swe", label: "Software Engineering" },
-        comm : { id: "skills/comm", label: "Communication" }
+        comm : { id: "skills/comm", label: "Communication" },
     }
 
     const projects = {
