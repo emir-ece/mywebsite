@@ -14,10 +14,11 @@ import Skill from "../components/Skill"
 const Main = () => {
     const langs = {
         cpp: { id: "langs/cpp", label: "C++" },
-        js_ts: { id: "langs/js_ts", label: "JavaScript" },
-        java: { id: "langs/java", label: "Python" },
+        js: { id: "langs/js", label: "JavaScript" },
+        python: { id: "langs/python", label: "Python" },
         html_css: { id: "langs/html_css", label: "MATLAB" },
-        tex: { id: "langs/tex", label: "LaTex" }
+        tex: { id: "langs/tex", label: "LaTex" },
+        mlab: { id: "langs/mlab, label: "MATLAB" }
     }
 
     const skills = {
@@ -41,9 +42,9 @@ const Main = () => {
     }
 
     const projects = {
-        cnn: { id: "projects/cnn", label: "Convolutional Neural Network", url: "https://github.com/mattperls-code/convolutional-neural-network" },
-        nn: { id: "projects/nn", label: "Neural Network", url: "https://github.com/mattperls-code/neural-network" },
-        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "https://github.com/RoboLancers/321-Crescendo-2024" },
+        nvda: { id: "projects/nvda", label: "AI-Powered Options Trading Platform", url: "https://github.com/emir-ece/AI-Powered-Options-Trading-Platform" },
+        ml: { id: "projects/ml", label: "Machine Learning Compiler for Scientific Computing", url: "https://github.com/emir-ece/ML-Scientific-Compiler" },
+        r: { id: "projects/r", label: "Data Cleaning and Trend Analysis of Vehicle MPG", url: "https://github.com/emir-ece/Data-Cleaning-and-Trend-Analysis-Using-R" },
         frc23: { id: "projects/frc23", label: "2023 FRC Robot", url: "https://github.com/RoboLancers/FRC-Main-2023" },
         fa: { id: "projects/fa", label: "Finite Automata", url: "https://github.com/mattperls-code/finite-automata" },
         parser: { id: "projects/parser", label: "Parser", url: "https://github.com/mattperls-code/parser" },
@@ -157,55 +158,47 @@ const Main = () => {
             <section id={"experience"}>
                 <h1>Experience</h1>
 
-                <Experience title={"RoboLancers Lead Programmer (2022 - 2024)"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
-                    projects.frc24,
-                    projects.frc23,
-                    projects.lancerscout
+                <Experience title={"AI-Powered Options Trading Platform"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
+                    projects.nvda,
                 ]} tags={[
-                    langs.java,
+                    langs.cpp,
+                    langs.python,
+                    langs.mlab,
                     skills.cv,
+                    skills.ml,
                     skills.robo,
                     skills.alg,
-                    skills.lead,
+                    skills.scraping,
                     skills.swe,
-                    skills.comm
+                    skills.hosting,
                 ]} description={
                     <React.Fragment>
-                        In 2023, my second year as a programmer on the RoboLancers, I was elected programming lead.
-                        This meant I was in charge of delivering functional robot code, managing my team of 10+ programmers, and communicating with mechnical, CAD, and electrical leads.
+                        I built a trading system on the NVIDIA Jetson Orin NX where I programmed in Python, C++/CUDA, and used CuPy/TensorRT to take advantage of GPU acceleration. I implemented financial models like Black-Scholes, Monte Carlo simulations, and Greeks so that the platform could perform real-time calculations and inference directly on the hardware.
                         <br /><br />
-                        I oversaw the development of our robot that year, helping my programmers implement complicated PID controllers for the robot's arm and self balancing, inverse kinematics for joint angles, computer vision and odometry for feedback, and autonomous path following.
+                        To power the system, I created a data pipeline that pulled live and historical data from Polygon, Tradier, and IEX/NQ L2 order books. I integrated YFinance and TradingView for visualization, and then developed a Portfolio & Risk Dashboard that calculated metrics like Value at Risk, Sharpe ratio, and drawdowns. I first prototyped the models in MATLAB and later translated them into Python for deployment.
                         <br /><br />
-                        While our end robot wasn't perfect that season, our team learned a lot and I had carved out a strong team of programmers for next year.
+                        I developed an AI-powered assistant that combined risk-neutral probabilities, machine learning signals, and historical pattern analysis. The assistant could automatically generate alerts for volatility spikes, unusual options flows, and order book imbalances, giving it real value as a decision-support tool for traders.
                         <br /><br />
-                        In 2024, I maintained my position as the lead programmer, and my team shrunk to 5-10 strong programmers.
-                        <br /><br />
-                        Before our main season began, I led our team through building a scouting suite, Lancer Scout, which we later used for strategy in competitions.
-                        <br /><br />
-                        When the main season arrived, I managed our team as we built an automatic object collector using vision, automatic scoring, and complex multistep autonomous path following procedures.
-                        <br /><br />
-                        With a sharp team of engineers and programmers and a ton of luck, we ultimately made it to the World Championship and won.
+                        Finally, I automated the ingestion of SEC EDGAR filings (10-Ks and 10-Qs) and packaged the entire project as containerized microservices using FastAPI. I built a Next.js frontend and used Docker CI/CD pipelines, which made the platform reproducible both on Jetson hardware and in the cloud.
                     </React.Fragment>
                 } />
-
-                <Experience title={"RoboLancers Programmer (2021 - 2022)"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
-                    langs.java,
-                    skills.cv,
-                    skills.robo,
+                <Experience title={"Machine Learning Compiler for Scientific Computing"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
+                    langs.python,
+                    langs.js,
+                    skills.ml,
                     skills.alg,
+                    skills.react,
                     skills.swe,
-                    skills.comm
+                    skills.regex
                 ]} description={
                     <React.Fragment>
-                        I joined the RoboLancers as a freshman in 2020 during covid. Because of the pandemic, a lot of the roles were fuzzy and I wasn't officially a programmer for the team until 2021.
+                        I designed and built a Python-based compiler focused on scientific computing workloads, especially PDE stencils and matrix operations. I implemented loop-nest optimizations such as tiling, unrolling, vectorization, and parallelization to make the computations run significantly faster.
                         <br /><br />
-                        In 2021, I skipped our school's FTC team and jumped directly into FRC (think skipping JV for Varsity if you aren't familiar with FIRST).
+                        By integrating Numba JIT compilation, I achieved 8–10× speedups over baseline NumPy implementations. To make sure performance improvements didn’t come at the cost of correctness, I added tolerance-based validation that checked the accuracy of numerical results.
                         <br /><br />
-                        While there, I was introduced to a team of returning programmers and given the task of finding some way to help contribute to the team's robot.
-                        It didn't take me long to find something I wanted to build, and I immediately began working on an automatic shooter and vision system for our team's dodgeball-style robot.
-                        After finishing the shooting, I helped some of my other teammates program the climbing mechanism, autonomous motion paths, and controls.
+                        I developed a React/JavaScript interface that let me interactively explore the compiler’s intermediate representation and scheduling choices. The tool provided real-time visualizations of applied optimizations, compared predicted vs. measured runtimes, and even incorporated roofline analysis to better understand performance bottlenecks.
                         <br /><br />
-                        By the end of the year, I had taught myself most of the framework we were using, learned how to use vision data, and was in charge of tuning most of our motor PIDs.
+                        To take it a step further, I built an ML-guided auto-tuner that searched for optimal schedules. This reduced the time it took to find efficient optimization strategies by more than 70%, making the system both faster and more adaptive.
                     </React.Fragment>
                 } />
             </section>
