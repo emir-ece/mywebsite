@@ -40,9 +40,6 @@ const Main = () => {
         lead : { id: "skills/lead", label: "Team Leadership" },
         swe : { id: "skills/swe", label: "Software Engineering" },
         comm : { id: "skills/comm", label: "Communication" },
-        cnn: { id: "projects/cnn", label: "CNN From Scratch", url: "#" },
-        nn: { id: "projects/nn", label: "Neural Net From Scratch", url: "#" },
-        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "#" },
     }
 
     const projects = {
@@ -62,7 +59,10 @@ const Main = () => {
         quoteit: { id: "projects/quoteit", label: "Quote It", url: "https://apps.apple.com/us/app/quote-it/id1628678287" },
         quickdodge: { id: "projects/quickdodge", label: "Quick Dodge", url: "https://apps.apple.com/us/app/quick-dodge/id1517218313" },
         eureka: { id: "projects/eureka", label: "Eureka", url: "https://eureka-mattperls-code.vercel.app/" },
-        lancerscout: { id: "projects/lancerscout", label: "Lancer Scout", url: "https://github.com/RoboLancers/lancer-scout" }
+        lancerscout: { id: "projects/lancerscout", label: "Lancer Scout", url: "https://github.com/RoboLancers/lancer-scout" },
+        cnn: { id: "projects/cnn", label: "CNN From Scratch", url: "#" },
+        nn: { id: "projects/nn", label: "Neural Net From Scratch", url: "#" },
+        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "#" },
     }
 
     const generateImageArr = (path, count) => {
