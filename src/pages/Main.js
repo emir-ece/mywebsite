@@ -188,7 +188,7 @@ const Main = () => {
                 } />
                 <Experience title={"Machine Learning Compiler for Scientific Computing"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
                     langs.python,
-                    langs.js,
+                    langs.js_ts,
                     skills.ml,
                     skills.alg,
                     skills.react,
