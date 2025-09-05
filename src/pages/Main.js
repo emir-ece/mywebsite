@@ -159,10 +159,10 @@ const Main = () => {
                     } />
                 </div>
             </section>
-            <section id={"experience"}>
-                <h1>Experience</h1>
+            <section id={"projects"}>
+                <h1>Projects</h1>
 
-                <Experience title={"AI-Powered Options Trading Platform"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
+                <Project Info={"AI-Powered Options Trading Platform"} images={generateImageArr("assets/experience/frc-prog-lead", 5)} projects={[
                     projects.nvda,
                 ]} tags={[
                     langs.cpp,
@@ -186,7 +186,7 @@ const Main = () => {
                         Finally, I automated the ingestion of SEC EDGAR filings (10-Ks and 10-Qs) and packaged the entire project as containerized microservices using FastAPI. I built a Next.js frontend and used Docker CI/CD pipelines, which made the platform reproducible both on Jetson hardware and in the cloud.
                     </React.Fragment>
                 } />
-                <Experience title={"Machine Learning Compiler for Scientific Computing"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
+                <Project Info={"Machine Learning Compiler for Scientific Computing"} images={generateImageArr("assets/experience/frc-prog", 2)} projects={[]} tags={[
                     langs.python,
                     langs.js_ts,
                     skills.ml,
@@ -206,8 +206,8 @@ const Main = () => {
                     </React.Fragment>
                 } />
             </section>
-            <section id={"projects"}>
-                <h1>Projects</h1>
+            <section id={"experiences"}>
+                <h1>Experiences</h1>
 
                 <Project info={projects.cnn} images={generateImageArr("assets/projects/cnn", 3)} languages={[
                     langs.cpp
