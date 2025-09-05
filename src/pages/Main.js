@@ -14,11 +14,12 @@ import Skill from "../components/Skill"
 const Main = () => {
     const langs = {
         cpp: { id: "langs/cpp", label: "C++" },
-        js: { id: "langs/js", label: "JavaScript" },
+        js_ts: { id: "langs/js_ts", label: "JavaScript" },
         python: { id: "langs/python", label: "Python" },
         html_css: { id: "langs/html_css", label: "MATLAB" },
-        tex: { id: "langs/tex", label: "LaTex" },
+        tex: { id: "langs/tex", label: "LaTeX" },
         mlab: { id: "langs/mlab", label: "MATLAB" },
+        java: { id: "langs/java", label: "Java" },
     }
 
     const skills = {
@@ -39,6 +40,9 @@ const Main = () => {
         lead : { id: "skills/lead", label: "Team Leadership" },
         swe : { id: "skills/swe", label: "Software Engineering" },
         comm : { id: "skills/comm", label: "Communication" },
+        cnn: { id: "projects/cnn", label: "CNN From Scratch", url: "#" }, #####
+        nn: { id: "projects/nn", label: "Neural Net From Scratch", url: "#" }, #####
+        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "#" }, #####
     }
 
     const projects = {
