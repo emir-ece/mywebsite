@@ -16,7 +16,7 @@ const Main = () => {
         cpp: { id: "langs/cpp", label: "C++" },
         js_ts: { id: "langs/js_ts", label: "JavaScript" },
         python: { id: "langs/python", label: "Python" },
-        html_css: { id: "langs/html_css", label: "MATLAB" },
+        html_css: { id: "langs/html_css", label: "HTML/CSS" },
         tex: { id: "langs/tex", label: "LaTeX" },
         mlab: { id: "langs/mlab", label: "MATLAB" },
         java: { id: "langs/java", label: "Java" },
@@ -40,9 +40,9 @@ const Main = () => {
         lead : { id: "skills/lead", label: "Team Leadership" },
         swe : { id: "skills/swe", label: "Software Engineering" },
         comm : { id: "skills/comm", label: "Communication" },
-        cnn: { id: "projects/cnn", label: "CNN From Scratch", url: "#" }, #####
-        nn: { id: "projects/nn", label: "Neural Net From Scratch", url: "#" }, #####
-        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "#" }, #####
+        cnn: { id: "projects/cnn", label: "CNN From Scratch", url: "#" },
+        nn: { id: "projects/nn", label: "Neural Net From Scratch", url: "#" },
+        frc24: { id: "projects/frc24", label: "2024 FRC Robot", url: "#" },
     }
 
     const projects = {
