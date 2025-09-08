@@ -219,26 +219,26 @@ const Main = () => {
 
             <section id={"experiences"}>
                 <h1>Experiences</h1>
-                <div className={"experience-container"}>
                 
-                    <Experience
-                        title={"General Manager — Boston Bay Pizza"}
-                        images={generateImageArr("assets/experience/bbp", 3)}   // adjust folder and count to your images
-                        projects={[projects.nvda, projects.ml]}                 // optional: link to projects
-                        tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
+                    <Experience title={"General Manager — Boston Bay Pizza"} images={generateImageArr("assets/experience/bbp", 3)} projects={[
+                    projects.nvda, 
+                    projects.ml
+                ]}  tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
                         description={
                             <React.Fragment>
-                            Managed daily operations in a high-productivity environment, analyzed
-                            financial trends, and increased sales revenue through strategic decision-making.
+                            In 2023, my second year as a programmer on the RoboLancers, I was elected programming lead.
+                            This meant I was in charge of delivering functional robot code, managing my team of 10+ programmers, and communicating with mechnical, CAD, and electrical leads.
                             <br /><br />
-                            <ul>
-                                <li>Supervised staff scheduling, inventory, and vendor relations</li>
-                                <li>Built weekly sales dashboards; identified margin leaks and reduced waste</li>
-                                <li>Implemented promos and menu changes based on data insights</li>
-                            </ul>
-                          </React.Fragment>
-                        }
-                     />
+                            I oversaw the development of our robot that year, helping my programmers implement complicated PID controllers for the robot's arm and self balancing, inverse kinematics for joint angles, computer vision and odometry for feedback, and autonomous path following.
+                            <br /><br />
+                            While our end robot wasn't perfect that season, our team learned a lot and I had carved out a strong team of programmers for next year.
+                            <br /><br />
+                            In 2024, I maintained my position as the lead programmer, and my team shrunk to 5-10 strong programmers.
+                            <br /><br />
+                            Before our main season began, I led our team through building a scouting suite, Lancer Scout, which we later used for strategy in competitions.
+                            <br /><br />
+                        </React.Fragment>
+                    } />
             </section>
 
 
