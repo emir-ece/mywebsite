@@ -218,23 +218,35 @@ const Main = () => {
                 </section>
 
             <section id={"experiences"}>
-                <h1>Experiences</h1>
-                
-                    <Experience title={"General Manager — Boston Bay Pizza 2 & Wings"} images={generateImageArr("assets/experience/bbp", 3)}
-                ]}  tags={[skills.lead, skills.comm]}
-                        description={
-                            <React.Fragment>
-                            Directed daily operations in a high-volume restaurant, overseeing service for 120+ customers nightly while ensuring seamless workflow, exceptional customer experiences, and consistent repeat business in a fast-paced environment.
-                            <br /><br />
-                            Negotiated and implemented strategic partnerships with suppliers and local organizations, driving marketing initiatives and optimized pricing models that boosted sales revenue by 60% within one year.
-                            <br /><br />
-                            Developed, analyzed, and presented weekly financial statements to owners, while managing payroll and cost-control measures that improved operational efficiency and safeguarded profitability.
-                            <br /><br />
-                            Recruited, trained, and led a team of 15+ employees, instilling a culture of accountability and teamwork that reduced staff turnover and enhanced service quality.
-                        </React.Fragment>
-                    } />
-            </section>
+              <h1>Experiences</h1>
 
+              <div className={"experience-container"}>
+                <Experience
+                  title={"General Manager — Boston Bay Pizza 2 & Wings"}
+                  images={generateImageArr("assets/experience/bbp", 3)}
+                  projects={[]}                                   // safe if your component expects it
+                  tags={[skills.lead, skills.comm]}
+                  description={
+                    <React.Fragment>
+                      Directed daily operations in a high-volume restaurant, overseeing service
+                      for 120+ customers nightly while ensuring seamless workflow, exceptional
+                      customer experiences, and consistent repeat business in a fast-paced environment.
+                      <br /><br />
+                      Negotiated and implemented strategic partnerships with suppliers and local
+                      organizations, driving marketing initiatives and optimized pricing models
+                      that boosted sales revenue by 60% within one year.
+                      <br /><br />
+                      Developed, analyzed, and presented weekly financial statements to owners,
+                      while managing payroll and cost-control measures that improved operational
+                      efficiency and safeguarded profitability.
+                      <br /><br />
+                      Recruited, trained, and led a team of 15+ employees, instilling a culture
+                      of accountability and teamwork that reduced staff turnover and enhanced service quality.
+                    </React.Fragment>
+                  }
+                />
+              </div>
+            </section>
 
             <section id={"skills"}>
                 <h1>Skills</h1>
