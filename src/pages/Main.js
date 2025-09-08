@@ -217,17 +217,19 @@ const Main = () => {
             </section>
 
             <section id={"experiences"}>
-                <h1>Experiences</h1>
-                <div className="experience-container">
-                    <h2>General Manager at Boston Bay Pizza 2</h2>
-                    <p>
-                        Managed daily operations in a high-productivity environment, analyzed financial trends, and increased sales revenue through strategic decision-making. 
-                        <br />
-                        <em>(Add more details about responsibilities, achievements, and skills learned here.)</em>
-                    </p>
-                </div>
-            </section>
+              <h1>Experiences</h1>
 
+              {/* use the same class as Project’s outer div */}
+              <div className="project">
+                <h2>General Manager at Boston Bay Pizza 2</h2>
+                <p>
+                  Managed daily operations in a high-productivity environment, analyzed financial
+                  trends, and increased sales revenue through strategic decision-making.
+                  <br />
+                  <em>(Add more details about responsibilities, achievements, and skills learned here.)</em>
+                </p>
+              </div>
+            </section>
             <section id={"skills"}>
                 <h1>Skills</h1>
                 <div className={"skills-container"}>
