@@ -8,6 +8,7 @@ import { faSquareEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 import Education from "../components/Education"
 import Project from "../components/Project"
+import Experience from "../components/Experience"
 import Skill from "../components/Skill"
 
 const Main = () => {
@@ -219,17 +220,24 @@ const Main = () => {
                 <section id={"experiences"}>
                   <h1>Experiences</h1>
 
-                  {/* use the same class as Project’s outer div */}
-                  <div className="project">
-                    <h2>General Manager at Boston Bay Pizza 2</h2>
-                    <p>
-                      Managed daily operations in a high-productivity environment, analyzed financial
-                      trends, and increased sales revenue through strategic decision-making.
-                      <br />
-                      <em>(Add more details about responsibilities, achievements, and skills learned here.)</em>
-                    </p>
-                  </div>
+                  <Experience
+                    title={"General Manager — Boston Bay Pizza"}
+                    images={generateImageArr("assets/experience/bbp", 3)}  // adjust path/count to your assets
+                    projects={[projects.nvda, projects.ml]}                 // optional: related projects to cross-link
+                    tags={[skills.lead, skills.comm, skills.hosting]}       // whatever tags you want to show
+                    description={
+                      <React.Fragment>
+                        Managed daily operations in a high-productivity environment, analyzed financial
+                        trends, and increased sales revenue through strategic decision-making.
+                        <br /><br />
+                        • Supervised staff scheduling, inventory, and vendor relations<br />
+                        • Built weekly sales dashboards; identified margin leaks and reduced waste<br />
+                        • Implemented promos and menu changes based on data insights
+                      </React.Fragment>
+                    }
+                  />
                 </section>
+
             <section id={"skills"}>
                 <h1>Skills</h1>
                 <div className={"skills-container"}>
