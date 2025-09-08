@@ -218,6 +218,7 @@ const Main = () => {
                 </section>
 
                 <section id={"experiences"}>
+                    <article className={"project experience"}>
                   <h1>Experiences</h1>
 
                   <Experience
