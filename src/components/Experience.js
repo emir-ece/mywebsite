@@ -1,134 +1,98 @@
 import React, { useRef, useState, useEffect } from "react"
 import { useWindowSize } from "react-use"
-
 import { HashLink } from "react-router-hash-link"
 
 const Carousel = ({ images }) => {
-    if (images.length == 0) return null
+  if (!images || images.length === 0) return null
 
-    if (images.length == 1) return (
-        <div className={"carousel"}>
-            <div className={"images"}>
-                <img src={images[0]} />
-            </div>
-        </div>
-    )
-
-    const carouselRef = useRef()
-    const [focusIndex, setFocusIndex] = useState(0)
-    
-    const imageComponents = []
-    const dotComponents = []
-
-    images.forEach((image, index) => {
-        imageComponents.push(
-            <img key={index} src={image} />
-        )
-        dotComponents.push(
-            <div key={index} className={index == focusIndex ? "dot-focused" : "dot-unfocused"} onClick={() => setFocusIndex(index)} />
-        )
-    })
-
-    const { width } = useWindowSize()
-
-    const itemWidth = Math.min(600, width - 80)
-
-    let timer = null
-    
-    const handleScroll = (e) => {
-        if (timer != null) clearTimeout(timer)
-
-        timer = setTimeout(() => {
-            const scrollIndex = Math.round(e.target.scrollLeft / itemWidth)
-
-            if (scrollIndex == focusIndex) carouselRef.current.scrollTo({ left: focusIndex * itemWidth, behavior: "smooth" })
-
-            else setFocusIndex(scrollIndex)
-        }, 250)
-    }
-
-    useEffect(() => {
-        carouselRef.current.scrollTo({ left: focusIndex * itemWidth, behavior: "smooth" })
-    }, [focusIndex])
-
+  if (images.length === 1) {
     return (
-        <div className={"carousel"}>
-            <div ref={carouselRef} onScroll={handleScroll} className={"images"}>
-                {
-                    imageComponents
-                }
-            </div>
-            <div className={"controls"}>
-                {
-                    dotComponents
-                }
-            </div>
+      <div className={"carousel"}>
+        <div className={"images"}>
+          <img src={images[0]} />
         </div>
+      </div>
     )
+  }
+
+  const carouselRef = useRef(null)
+  const timerRef = useRef(null)
+  const [focusIndex, setFocusIndex] = useState(0)
+  const { width } = useWindowSize()
+  const itemWidth = Math.min(600, width - 80)
+
+  const handleScroll = (e) => {
+    if (timerRef.current) clearTimeout(timerRef.current)
+    timerRef.current = setTimeout(() => {
+      const scrollIndex = Math.round(e.target.scrollLeft / itemWidth)
+      if (scrollIndex === focusIndex) {
+        carouselRef.current?.scrollTo({ left: focusIndex * itemWidth, behavior: "smooth" })
+      } else {
+        setFocusIndex(scrollIndex)
+      }
+    }, 250)
+  }
+
+  useEffect(() => {
+    carouselRef.current?.scrollTo({ left: focusIndex * itemWidth, behavior: "smooth" })
+  }, [focusIndex, itemWidth])
+
+  return (
+    <div className={"carousel"}>
+      <div ref={carouselRef} onScroll={handleScroll} className={"images"}>
+        {images.map((img, i) => <img key={i} src={img} />)}
+      </div>
+      <div className={"controls"}>
+        {images.map((_, i) => (
+          <div
+            key={i}
+            className={i === focusIndex ? "dot-focused" : "dot-unfocused"}
+            onClick={() => setFocusIndex(i)}
+          />
+        ))}
+      </div>
+    </div>
+  )
 }
 
-const Experience = ({ title, images, projects, tags, description }) => {
-    const projectsComponents = []
+const Experience = ({ title, images = [], projects = [], tags = [], description }) => {
+  return (
+    // IMPORTANT: reuse Project card styling by including "project"
+    <article className={"project experience"}>
+      <div className={"info"}>
+        <h2>{title}</h2>
 
-    projects.forEach((project, index) => {
-        projectsComponents.push(
-            <HashLink smooth key={index} to={"#" + project.id} className={"descriptor"}>
-                {
-                    project.label
-                }
-            </HashLink>
-        )
-    })
+        {projects.length !== 0 && (
+          <div className={"descriptors"}>
+            <span className="label">Projects:</span>
+            {projects.map((p, i) => (
+              <HashLink smooth key={i} to={`#${p.id}`} className={"descriptor"}>
+                {p.label}
+              </HashLink>
+            ))}
+          </div>
+        )}
 
-    const tagsComponents = []
+        {tags.length !== 0 && (
+          <div className={"descriptors"}>
+            <span className="label">Tags:</span>
+            {tags.map((t, i) => (
+              <HashLink smooth key={i} to={`#${t.id}`} className={"descriptor"}>
+                {t.label}
+              </HashLink>
+            ))}
+          </div>
+        )}
 
-    tags.forEach((tag, index) => {
-        tagsComponents.push(
-            <HashLink smooth key={index} to={"#" + tag.id} className={"descriptor"}>
-                {
-                    tag.label
-                }
-            </HashLink>
-        )
-    })
+        <div className={"description"}>
+          {description}
+        </div>
+      </div>
 
-    return (
-        <article className={"experience"}>
-            <div className={"info"}>
-                <h2>
-                    {
-                        title
-                    }
-                </h2>
-                {
-                    projects.length != 0 && (
-                        <div className={"descriptors"}>
-                            Projects:
-                            {
-                                projectsComponents
-                            }
-                        </div>
-                    )
-                }
-                {
-                    tags.length != 0 && (
-                        <div className={"descriptors"}>
-                            Tags:
-                            {
-                                tagsComponents
-                            }
-                        </div>
-                    )
-                }
-                <div className={"description"}>
-                    {
-                        description
-                    }
-                </div>
-            </div>
-            <Carousel images={images} />
-        </article>
-    )
+      <Carousel images={images} />
+    </article>
+  )
 }
 
 export default Experience
+
