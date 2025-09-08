@@ -226,17 +226,13 @@ const Main = () => {
                 ]}  tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
                         description={
                             <React.Fragment>
-                            In 2023, my second year as a programmer on the RoboLancers, I was elected programming lead.
-                            This meant I was in charge of delivering functional robot code, managing my team of 10+ programmers, and communicating with mechnical, CAD, and electrical leads.
+                            Directed daily operations in a high-volume restaurant, overseeing service for 120+ customers nightly while ensuring seamless workflow, exceptional customer experiences, and consistent repeat business in a fast-paced environment.
                             <br /><br />
-                            I oversaw the development of our robot that year, helping my programmers implement complicated PID controllers for the robot's arm and self balancing, inverse kinematics for joint angles, computer vision and odometry for feedback, and autonomous path following.
+                            Negotiated and implemented strategic partnerships with suppliers and local organizations, driving marketing initiatives and optimized pricing models that boosted sales revenue by 60% within one year.
                             <br /><br />
-                            While our end robot wasn't perfect that season, our team learned a lot and I had carved out a strong team of programmers for next year.
+                            Developed, analyzed, and presented weekly financial statements to owners, while managing payroll and cost-control measures that improved operational efficiency and safeguarded profitability.
                             <br /><br />
-                            In 2024, I maintained my position as the lead programmer, and my team shrunk to 5-10 strong programmers.
-                            <br /><br />
-                            Before our main season began, I led our team through building a scouting suite, Lancer Scout, which we later used for strategy in competitions.
-                            <br /><br />
+                            Recruited, trained, and led a team of 15+ employees, instilling a culture of accountability and teamwork that reduced staff turnover and enhanced service quality.
                         </React.Fragment>
                     } />
             </section>
