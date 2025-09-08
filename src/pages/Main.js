@@ -217,30 +217,28 @@ const Main = () => {
                 />
                 </section>
 
-                <section id={"experiences"}>
-                  <h1>Experiences</h1>
+            <section id={"experiences"}>
+                <h1>Experiences</h1>
 
-                  <Experience
-                    title={"General Manager — Boston Bay Pizza"}
-                    images={generateImageArr("assets/experience/bbp", 3)}   // adjust folder and count to your images
-                    projects={[projects.nvda, projects.ml]}                 // optional: link to projects
-                    tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
-                    description={
-                      <React.Fragment>
-                        Managed daily operations in a high-productivity environment, analyzed
-                        financial trends, and increased sales revenue through strategic decision-making.
-                        <br /><br />
-                        <ul>
-                          <li>Supervised staff scheduling, inventory, and vendor relations</li>
-                          <li>Built weekly sales dashboards; identified margin leaks and reduced waste</li>
-                          <li>Implemented promos and menu changes based on data insights</li>
-                        </ul>
-                      </React.Fragment>
-                    }
-                  />
-
-                  {/* You can add more <Experience /> entries below the same way */}
-                </section>
+                <Experience
+                title={"General Manager — Boston Bay Pizza"}
+                images={generateImageArr("assets/experience/bbp", 3)}   // adjust folder and count to your images
+                projects={[projects.nvda, projects.ml]}                 // optional: link to projects
+                tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
+                description={
+                    <React.Fragment>
+                    Managed daily operations in a high-productivity environment, analyzed
+                    financial trends, and increased sales revenue through strategic decision-making.
+                    <br /><br />
+                    <ul>
+                        <li>Supervised staff scheduling, inventory, and vendor relations</li>
+                        <li>Built weekly sales dashboards; identified margin leaks and reduced waste</li>
+                        <li>Implemented promos and menu changes based on data insights</li>
+                    </ul>
+                  </React.Fragment>
+                }
+             />
+            </section>
 
 
             <section id={"skills"}>
