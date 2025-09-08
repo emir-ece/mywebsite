@@ -220,10 +220,8 @@ const Main = () => {
             <section id={"experiences"}>
                 <h1>Experiences</h1>
                 
-                    <Experience title={"General Manager — Boston Bay Pizza"} images={generateImageArr("assets/experience/bbp", 3)} projects={[
-                    projects.nvda, 
-                    projects.ml
-                ]}  tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
+                    <Experience title={"General Manager — Boston Bay Pizza 2 & Wings"} images={generateImageArr("assets/experience/bbp", 3)}
+                ]}  tags={[skills.lead, skills.comm]}
                         description={
                             <React.Fragment>
                             Directed daily operations in a high-volume restaurant, overseeing service for 120+ customers nightly while ensuring seamless workflow, exceptional customer experiences, and consistent repeat business in a fast-paced environment.
