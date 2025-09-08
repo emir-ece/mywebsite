@@ -218,26 +218,30 @@ const Main = () => {
                 </section>
 
                 <section id={"experiences"}>
-                  <article className={"project experience"}>
                   <h1>Experiences</h1>
 
                   <Experience
                     title={"General Manager — Boston Bay Pizza"}
-                    images={generateImageArr("assets/experience/bbp", 3)}  // adjust path/count to your assets
-                    projects={[projects.nvda, projects.ml]}                 // optional: related projects to cross-link
-                    tags={[skills.lead, skills.comm, skills.hosting]}       // whatever tags you want to show
+                    images={generateImageArr("assets/experience/bbp", 3)}   // adjust folder and count to your images
+                    projects={[projects.nvda, projects.ml]}                 // optional: link to projects
+                    tags={[skills.lead, skills.comm, skills.hosting]}       // pick tags you want displayed
                     description={
                       <React.Fragment>
-                        Managed daily operations in a high-productivity environment, analyzed financial
-                        trends, and increased sales revenue through strategic decision-making.
+                        Managed daily operations in a high-productivity environment, analyzed
+                        financial trends, and increased sales revenue through strategic decision-making.
                         <br /><br />
-                        • Supervised staff scheduling, inventory, and vendor relations<br />
-                        • Built weekly sales dashboards; identified margin leaks and reduced waste<br />
-                        • Implemented promos and menu changes based on data insights
+                        <ul>
+                          <li>Supervised staff scheduling, inventory, and vendor relations</li>
+                          <li>Built weekly sales dashboards; identified margin leaks and reduced waste</li>
+                          <li>Implemented promos and menu changes based on data insights</li>
+                        </ul>
                       </React.Fragment>
                     }
                   />
+
+                  {/* You can add more <Experience /> entries below the same way */}
                 </section>
+
 
             <section id={"skills"}>
                 <h1>Skills</h1>
