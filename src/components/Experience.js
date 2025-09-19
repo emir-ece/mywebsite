@@ -57,7 +57,6 @@ const Carousel = ({ images }) => {
 
 const Experience = ({ title, images = [], projects = [], tags = [], description }) => {
   return (
-    // IMPORTANT: reuse Project card styling by including "project"
     <article className={"project experience"}>
       <div className={"info"}>
         <h2>{title}</h2>
